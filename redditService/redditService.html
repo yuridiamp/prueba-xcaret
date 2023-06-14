@@ -1,0 +1,17 @@
+<template>
+
+    <template if:true={data}>
+        <lightning-card  title="Reddit Items" icon-name="standard:display_text">
+            <div class="slds-scrollable" style="height:20rem;" tabindex="0">
+                <lightning-datatable
+                        key-field="id"
+                        data={data}
+                        columns={columns}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column="true">
+                </lightning-datatable>
+            </div>
+        </lightning-card>
+    </template>
+
+</template>
